@@ -43,6 +43,9 @@ public class ManageUserProgram {
 //        manageUser.deleteUserById(deleteID);
 
         //회원 목록 출력
+        ManageUser manageUser = new ManageUser();
+        manageUser.getAllUsers();
+
 
     }
 }

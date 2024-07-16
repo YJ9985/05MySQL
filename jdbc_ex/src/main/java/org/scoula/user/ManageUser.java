@@ -67,7 +67,12 @@ public class ManageUser {
                 users.add(user);
             }
 
-            users.forEach(System.out::println);
+            users.forEach((user -> System.out.println(user)));
+            //간결한 버전
+            //users.forEach(System.out::println);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 }

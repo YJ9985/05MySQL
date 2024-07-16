@@ -89,11 +89,13 @@ public class User {
     @Override
     public String toString() {
         return "[" +
-                ", userid='" + userid + '\'' +
-                ", name='" + name + '\'' +
-                ", password='" + password + '\'' +
-                ", age=" + age +
-                ", membership=" + membership +
+                "id= " + id +
+                ", userid= '" + userid + '\'' +
+                ", name= '" + name + '\'' +
+                ", password= '" + password + '\'' +
+                ", age= " + age +
+                ", membership= " + membership +
+                ", singupDate= " + singupDate +
                 ']';
     }
 }
