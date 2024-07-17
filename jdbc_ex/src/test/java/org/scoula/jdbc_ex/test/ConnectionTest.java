@@ -1,7 +1,9 @@
-package org.scoula.jdbc_ex.test;
+package src.test.java.org.scoula.jdbc_ex.test;
 
+//import org.junit.jupiter.api.DisplayName;
+//import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.scoula.jdbc_ex.common.JDBCUtil;
 
 import java.sql.Connection;
