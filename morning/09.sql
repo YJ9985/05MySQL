@@ -59,3 +59,44 @@ ALTER TABLE usertbl ADD CONSTRAINT pk_name PRIMARY KEY(name);
 SELECT * FROM usertbl;
 SHOW INDEX FROM usertbl;
 
+USE sqldb;
+SELECT * FROM usertbl;
+SHOW INDEX FROM usertbl;
+
+-- 인덱스 크기 확인
+SHOW TABLE STATUS LIKE 'usertbl';
+
+-- addr 컬럼에 인덱스 만들기
+CREATE INDEX idx_usertbl_addr
+ON usertbl(addr);
+SHOW INDEX FROM usertbl;
+
+-- 인덱스 크기 확인
+SHOW TABLE STATUS LIKE 'usertbl';
+
+-- 생성한 인덱스를 실제로 적용
+ANALYZE TABLE usertbl;
+SHOW TABLE STATUS LIKE 'usertbl';
+
+-- 출생년도에 보조 인덱스 생성
+CREATE UNIQUE INDEX idx_usertbl_birthYear
+ON usertbl(birthYear); # 중복값이 있어서 오류 발생
+
+CREATE UNIQUE INDEX idx_usertbl_name
+ON usertbl(uName);
+SHOW INDEX FROM usertbl;
+-- uName 보조 인덱스 삭제
+DROP INDEX idx_usertbl_name ON usertbl;
+
+-- name, birthYear 조합 인덱스 생성
+CREATE UNIQUE INDEX idx_usertbl_name_birthYear
+ON usertbl(uName, birthYear);
+SHOW INDEX FROM usertbl;
+
+-- index 삭제
+SHOW INDEX FROM usertbl;
+DROP INDEX idx_usertbl_addr ON usertbl;
+ALTER TABLE usertbl DROP INDEX idx_usertbl_addr; # 동일한 표현
+
+DROP INDEX idx_usertbl_name_birthYear ON usertbl;
+ALTER TABLE usertbl DROP INDEX idx_usertbl_name_birthYear; 
