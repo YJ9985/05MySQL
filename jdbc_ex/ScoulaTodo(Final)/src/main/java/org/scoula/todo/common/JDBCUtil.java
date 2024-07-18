@@ -1,4 +1,4 @@
-package org.scoula.common;
+package org.scoula.todo.common;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,10 +6,7 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class JDBCUtil {
-
-    //데이터베이스 접속
     static Connection conn = null;
-
     static {
         try {
             Properties properties = new Properties();

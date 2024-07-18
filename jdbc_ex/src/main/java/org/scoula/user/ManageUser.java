@@ -1,6 +1,6 @@
 package org.scoula.user;
 
-import org.scoula.common.JDBCUtil;
+import org.common.JDBCUtil;
 
 import java.sql.*;
 import java.util.ArrayList;

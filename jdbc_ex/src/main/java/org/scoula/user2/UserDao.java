@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.scoula.common.JDBCUtil;
+import org.common.JDBCUtil;
 
 public class UserDao {
     private final Connection conn;

@@ -1,6 +1,6 @@
 package org.scoula.user;
 
-import org.scoula.common.JDBCUtil;
+import org.common.JDBCUtil;
 
 import java.sql.Connection;
 import java.util.Scanner;
